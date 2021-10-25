@@ -46,6 +46,7 @@ class SecurityDAO {
 		
 		return $id;
 	}
+<<<<<<< HEAD
 
 	public function getRole(UserModel $user) {
 		$username = $user->getUsername();
@@ -84,6 +85,9 @@ class SecurityDAO {
 	    
 	    return $first_Name;
 	}
+=======
+	
+>>>>>>> parent of dfba7d9 (Milestone 6)
 	public function getConnection() {
 		// The default Server settings.
 		$mysql_host = "vkh7buea61avxg07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";

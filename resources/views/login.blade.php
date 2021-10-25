@@ -1,6 +1,7 @@
 <!-- CST-256 CLC Project Version 1.0 Page Created by Elijah Coverini -->
 
 <?php // A simple page for logging in complete with @csrf token. ?>
+<<<<<<< HEAD
 @extends('layouts.footer')
 <head>
     <title>Login Page</title>
@@ -14,6 +15,13 @@
     </style>
 </head>
 <body>
+=======
+
+@extends('layouts.appmaster')
+@section('title', 'Login Page')
+@section('content')
+
+>>>>>>> parent of dfba7d9 (Milestone 6)
 		<h2>User login</h2>
 		<form action="dologin" method="POST">
 		@csrf
@@ -27,3 +35,7 @@
 				</div>
 				<button style="margin-top: 5px;" type="submit" class="btn btn-primary">Login</button>
 		</form>
+<<<<<<< HEAD
+=======
+@endsection
+>>>>>>> parent of dfba7d9 (Milestone 6)

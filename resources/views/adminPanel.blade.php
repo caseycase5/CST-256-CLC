@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -44,30 +45,13 @@ if($loggedIn != 1) {
     Redirect::to('home')->send();
 }
 ?>
+=======
+
+>>>>>>> parent of dfba7d9 (Milestone 6)
 
 @extends('layouts.appmaster')
 @section('title', 'Admin Panel')
 @section('content')
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="btn btn-dark" role="button" href="dashboard">Home</a>
-        </li>
-
-        <li class='nav-item'>
-          	<form action='adminpanel' method='get'>
-    		<button name='adminPanel' type='submit' class='btn btn-dark'>Admin Panel</button>
-			</form>
-        </li>
-        <li>
-        	<a href="logout" role="button" class="btn btn-dark">Logout</a> 
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 <br>
 	<form action='editUser' method='POST'>
 		<label for='userID'>Enter an ID to Edit:</label>
@@ -83,9 +67,11 @@ if($loggedIn != 1) {
 <?php // CST-256 page by team.
 	use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+
 	$controller = new AdminController();
 	$controller->adminPanel();
 ?>
+<<<<<<< HEAD
 
 <br>
 	<form action='editJob' method='POST'>
@@ -109,6 +95,8 @@ use App\Http\Controllers\AdminController;
 		<button type='submit' class='btn btn-primary'>Create New Job Listing</button>
 	</form>
 	<br>
+=======
+>>>>>>> parent of dfba7d9 (Milestone 6)
 	
 	
 @endsection

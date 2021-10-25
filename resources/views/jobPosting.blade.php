@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+=======
+<?php ?>
+@extends('layouts.appmaster')
+@section('title', 'Job Postings')
+@section('content')
+
+<table class="table table-dark table-striped">
+	<tr>
+		<th>Job ID</th>
+		<th>Company</th>
+		<th>Job Title</th>
+		<th>Job Type</th>
+		<th>Job Description</th>
+		<th>Job Status</th>
+		<th>Closing Date</th>
+	</tr>
+
+>>>>>>> parent of dfba7d9 (Milestone 6)
 <?php
 use App\Services\Data\SecurityDAO;
 
@@ -10,6 +29,7 @@ use App\Services\Data\SecurityDAO;
 	$DAO = new SecurityDAO();
 	$query_run = $DAO->getAllJobs();
 ?>
+<<<<<<< HEAD
 @extends('layouts.datatables')
 @section('title', 'Job Posting Page')
 @section('content')
@@ -89,3 +109,21 @@ $(document).ready(function() {
 </script>
 </html>
 @endsection
+=======
+</table>
+  <?php mysqli_close($conn); // Close connection ?>
+
+@endsection  
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> parent of dfba7d9 (Milestone 6)

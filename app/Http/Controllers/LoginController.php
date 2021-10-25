@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\UserModel;
 use App\Services\Business\SecurityService;
 use App\Services\Data\SecurityDAO;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\UserModel;
@@ -35,6 +36,20 @@ use App\Services\Utility\MyLogger3;
 class LoginController extends Controller {
 	public function index(Request $request) { // Using a data request.
 		try { 
+=======
+
+class LoginController extends Controller {
+	public function index(Request $request) { // Using a data request.
+		// Instantiating a new security service while setting username and password.
+		$login = new SecurityService();
+		$DAO = new SecurityDAO();
+		$username = $request->input('username');
+		$password = $request->input('password');
+		
+		// Binding to the userModel.
+		$userModel = new UserModel($username, $password);
+
+>>>>>>> parent of dfba7d9 (Milestone 6)
 		// Validating login 1 for valid 0 for invalid
 		$validation = $login->login($userModel);
 		$id = $DAO->getID($userModel);
@@ -60,6 +75,7 @@ class LoginController extends Controller {
 			$logger->error($e);
 		}
 	}
+<<<<<<< HEAD
 }
     		// Validating login 1 for valid 0 for invalid
     		$validation = $login->login($userModel);
@@ -98,3 +114,6 @@ class LoginController extends Controller {
 
 ?>
 
+=======
+}
+>>>>>>> parent of dfba7d9 (Milestone 6)

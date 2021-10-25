@@ -22,4 +22,9 @@
 	<a href="login" class="btn btn-dark">Login</a>
 	<a href="registration" class="btn btn-dark">Register</a>
 </div>
+<<<<<<< HEAD
 </body>
+=======
+
+@endsection
+>>>>>>> parent of dfba7d9 (Milestone 6)

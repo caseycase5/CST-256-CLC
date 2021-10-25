@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <html>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -57,8 +56,3 @@
   </div>
 </nav>
 </html>
-=======
-<div id="banner">
-	<h1> Cinematic Station-1 </h1>
-</div>
->>>>>>> Stashed changes
