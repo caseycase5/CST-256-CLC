@@ -25,19 +25,6 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
-			<arguments>
-				<dictionary>
-					<key>LaunchConfigHandle</key>
-<<<<<<< Updated upstream
-					<value>&lt;project&gt;/.externalToolBuilders/Milestone4.launch</value>
-=======
-					<value>&lt;project&gt;/.externalToolBuilders/New.launch</value>
->>>>>>> Stashed changes
-				</dictionary>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.php.core.PHPNature</nature>

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <html>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -29,10 +28,6 @@
     		<button name="affinityMember" type="submit" class="btn btn-dark">Affinity Memberships</button>
 			</form>  
         </li>
-          <form action="affinity" method="get">
-        	@csrf
-    		<button name="affinityMember" type="submit" class="btn btn-dark">Affinity Membeships</button>
-			</form>        
         <li>
         	<a href="api" role="button" class="btn btn-dark">APIs</a> 
         </li>
@@ -57,8 +52,3 @@
   </div>
 </nav>
 </html>
-=======
-<div id="banner">
-	<h1> Cinematic Station-1 </h1>
-</div>
->>>>>>> Stashed changes
