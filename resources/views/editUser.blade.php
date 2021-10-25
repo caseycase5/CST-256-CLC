@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php  // CST-256 page by team.
 use App\Http\Controllers\ProfileController;
 
@@ -10,13 +9,10 @@ if($loggedIn != 1) {
 
 ?>
 
-=======
->>>>>>> parent of dfba7d9 (Milestone 6)
 @extends('layouts.appmaster')
 @section('title', 'Edit User Profile')
 @section('content')
 
-<<<<<<< HEAD
 <div class="col-md-6">
 		<h2>User Profile</h2>
 		<form action="adminUpdateProfile" method="post">
@@ -77,15 +73,4 @@ if($loggedIn != 1) {
 			</form>
 		</div>
 		
-=======
-<?php
-	use App\Http\Controllers\AdminController;
-	
-	$id = $_GET['id'];
-	$controller = new AdminController();
-	$controller->updateUserProfile($id);
-	
-	//echo $id;
-?>
->>>>>>> parent of dfba7d9 (Milestone 6)
 @endsection

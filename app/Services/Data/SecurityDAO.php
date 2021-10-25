@@ -46,8 +46,7 @@ class SecurityDAO {
 		
 		return $id;
 	}
-<<<<<<< HEAD
-
+	
 	public function getRole(UserModel $user) {
 		$username = $user->getUsername();
 		$password = $user->getPassword();
@@ -66,28 +65,7 @@ class SecurityDAO {
 		
 		return $role;
 	}
-
-	public function getFirstName(UserModel $user) {
-	    $username = $user->getUsername();
-	    $password = $user->getPassword();
-	    $conn = $this->getConnection();
-	    
-	    $sql = "SELECT `first_Name` FROM `users` WHERE `username` = '$username' AND `password` = '$password';";
-	    
-	    $result = $conn->query($sql);
-	    
-	    if ($result->num_rows > 0) { // Only runs if at least one user exists matching the given credentials.
-	        while($row = $result->fetch_assoc()) {
-	            // Verifies each database variable.
-	            $first_Name = $row["first_Name"];
-	        }
-	    }
-	    
-	    return $first_Name;
-	}
-=======
 	
->>>>>>> parent of dfba7d9 (Milestone 6)
 	public function getConnection() {
 		// The default Server settings.
 		$mysql_host = "vkh7buea61avxg07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";

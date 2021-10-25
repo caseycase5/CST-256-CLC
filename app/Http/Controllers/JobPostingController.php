@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 use App\Services\Data\SecurityDAO;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 
 class JobPostingController extends Controller {
     
@@ -79,24 +77,17 @@ class JobPostingController extends Controller {
     	
     	//Create new Connection
     	$conn = $DAO->getConnection();
-    	$count = DB::table('job_posting')->count();
     	
-    	if($count < 20 )
-    	{
-        	$sql = "INSERT INTO `job_posting` (`Company`, `Job_Title`, `Job_Type`, `Job_Description`, `Job_status`, `Closing_Date`)
-    				VALUES('$company', '$jobTitle', '$jobType', '$jobDescription', '$jobStatus', '$closingDate');";
-        	
-        	if (mysqli_query($conn, $sql)) {
-        		echo "<h1>Job Listing Created</h1><br>";
-        		return view("landingPage");
-        	} else {
-        		$error = mysqli_error($conn);
-        		$data = ['error' => $error];
-        		return view("errorPage")->with($data); // Redirect for failed Update
-        	}
-    	}
-    	else {
-    	    return view("jobError");
+    	$sql = "INSERT INTO `job_posting` (`Company`, `Job_Title`, `Job_Type`, `Job_Description`, `Job_status`, `Closing_Date`)
+				VALUES('$company', '$jobTitle', '$jobType', '$jobDescription', '$jobStatus', '$closingDate');";
+    	
+    	if (mysqli_query($conn, $sql)) {
+    		echo "<h1>Job Listing Created</h1><br>";
+    		return view("landingPage");
+    	} else {
+    		$error = mysqli_error($conn);
+    		$data = ['error' => $error];
+    		return view("errorPage")->with($data); // Redirect for failed Update
     	}
     }
     
