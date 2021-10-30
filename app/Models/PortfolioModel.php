@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PortfolioModel extends Model {
+class PortfolioModel extends Model 
+{
 	
 	// API Info
 	protected $table = 'portfolio';

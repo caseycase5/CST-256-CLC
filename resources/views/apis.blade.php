@@ -1,4 +1,5 @@
 <?php 
+//View that diplays APIs
 // Login Validation
 $loggedIn = session('loggedIn');
 if($loggedIn != 1) {

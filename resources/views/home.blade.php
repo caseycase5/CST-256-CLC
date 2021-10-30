@@ -2,6 +2,7 @@
 
 <?php 
 // A simple login and registration page for users.
+//Home Page 
 ?>
 @extends('layouts.footer')
 <head>

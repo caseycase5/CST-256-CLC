@@ -1,6 +1,6 @@
 <?php  // CST-256 page by team.
 	use App\Http\Controllers\JobPostingController;
-
+//Detailed job posting display page.
 	// Needed for page functionality.
 	// A stylish page for user information.
 ?>

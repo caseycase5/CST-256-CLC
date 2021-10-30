@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class JobPostingController extends Controller {
     
+   //function to edit Job Posting
     public function editJob(Request $request) {
     	$id = $request->input('jobID');
     	$DAO = new SecurityDAO();

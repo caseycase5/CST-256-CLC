@@ -1,5 +1,5 @@
 <?php 
-// Login Validation
+// Error page
 $loggedIn = session('loggedIn');
 if($loggedIn != 1) {
 	Redirect::to('home')->send();

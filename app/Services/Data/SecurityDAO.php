@@ -5,6 +5,7 @@ namespace App\Services\Data;
 use App\Models\UserModel;
 use App\Models\JobModel;
 
+//Database methods using MYAQL
 class SecurityDAO {
 	public function __construct() { // A constructor.
 	}
@@ -28,7 +29,7 @@ class SecurityDAO {
 		}
 	}
 	
-	public function getID(UserModel $user) {
+	public function getID(UserModel $user) {//function returns the userID of a member in the database
 		$username = $user->getUsername();
 		$password = $user->getPassword();
 		$conn = $this->getConnection();
@@ -47,7 +48,7 @@ class SecurityDAO {
 		return $id;
 	}
 	
-	public function getRole(UserModel $user) {
+	public function getRole(UserModel $user) {//function returns the role of a member in the database
 		$username = $user->getUsername();
 		$password = $user->getPassword();
 		$conn = $this->getConnection();
@@ -66,7 +67,7 @@ class SecurityDAO {
 		return $role;
 	}
 	
-	public function getConnection() {
+	public function getConnection() {  //Function that establishes an MySQL connection in the AWS cloud database.  Returns the connection
 		// The default Server settings.
 		$mysql_host = "vkh7buea61avxg07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 		$mysql_database = "ayugetdsmsvnoclz";
@@ -85,7 +86,7 @@ class SecurityDAO {
 		return $conn;
 	}
 	
-	public function getAllJobs() {
+	public function getAllJobs() { // Returnds all of the jobs postings from the database in descending order
 			$conn = $this->getConnection();
 			$query = "SELECT * FROM job_posting ORDER BY Job_ID DESC";
 			$query_run = mysqli_query($conn, $query);

@@ -1,6 +1,6 @@
 <?php  // CST-256 page by team.
 use App\Http\Controllers\ProfileController;
-
+// View that displays a user's portfolio
 // Login Validation
 $loggedIn = session('loggedIn');
 if($loggedIn != 1) {

@@ -1,4 +1,5 @@
 <?php 
+//Affinity Group that displays if a user is the member of an affinity group
 $loggedIn = session('loggedIn');
 if($loggedIn != 1) {
 	Redirect::to('home')->send();

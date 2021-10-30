@@ -1,5 +1,6 @@
 <?php
 use App\Services\Data\SecurityDAO;
+//Job posting Page
 
 	// Checking if a user is logged in
 	$loggedIn = session('loggedIn');

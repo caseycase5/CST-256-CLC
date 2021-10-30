@@ -11,7 +11,9 @@ use App\Services\Data\SecurityDAO;
 use App\Services\Utility\MyLogger3;
 
 class LoginController extends Controller {
-	public function index(Request $request) { // Using a data request.
+	
+//function to return landing page view after successful login.    
+    public function index(Request $request) { // Using a data request.
 		try { 
 		// Instantiating a new security service while setting username and password.
 		$login = new SecurityService();

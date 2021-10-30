@@ -1,4 +1,5 @@
 <?php  // CST-256 page by team.
+//Page to display user profile
 	use App\Http\Controllers\ProfileController;
 	
 	$loggedIn = session('loggedIn');

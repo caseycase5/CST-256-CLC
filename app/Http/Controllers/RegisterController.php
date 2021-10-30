@@ -6,7 +6,8 @@ use App\Services\Data\SecurityDAO;
 
 class RegisterController extends Controller {
 	
-	public function index(Request $request) { // Data request used for the index.
+	//function to register new user to access website.
+    public function index(Request $request) { // Data request used for the index.
 		// Binds each database variable.
 		$username = $request->input('username');
 		$password = $request->input('password');
@@ -40,6 +41,7 @@ class RegisterController extends Controller {
 		}	
 	}
 	
+	// Function to Setup Data Validation Rules for Login Form
 	private function validateForm(Request $request)
 	{
 		// Setup Data Validation Rules for Login Form

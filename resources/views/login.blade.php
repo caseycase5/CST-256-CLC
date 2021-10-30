@@ -1,6 +1,7 @@
 <!-- CST-256 CLC Project Version 1.0 Page Created by Elijah Coverini -->
 
 <?php // A simple page for logging in complete with @csrf token. ?>
+
 @extends('layouts.footer')
 <head>
     <title>Login Page</title>

@@ -1,4 +1,6 @@
-<?php  // CST-256 page by team.
+<?php  
+    // View that displays to edit a Job Posting
+    //CST-256 page by team.
 	// Checking if a user is logged in
 	$loggedIn = session('loggedIn');
 	if($loggedIn != 1) {

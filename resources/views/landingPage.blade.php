@@ -1,6 +1,6 @@
 <?php use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\LoginController;
-
+//Page displays when user firsts authenticates
 // CST-256 page by team.
 // A page for user logins.
 // Login Validation

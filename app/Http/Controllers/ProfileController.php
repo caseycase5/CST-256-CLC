@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Services\Data\SecurityDAO;
 
 class ProfileController extends Controller {
+    
+    //Function to return the members profile view
     public function userProfile() {
         $username = session('username');
         $DAO = new SecurityDAO();
@@ -71,6 +73,7 @@ class ProfileController extends Controller {
         }
     }
     
+    //Function to return the eportfolio view.
     public function eportfolioProfile() {
         $username = session('username');
         $DAO = new SecurityDAO();
@@ -166,7 +169,7 @@ class ProfileController extends Controller {
                 return view('eportfolioProfile')->with($data);
         }}
         
-        
+        //Function to display member's affinity membership
         public function affinityMemberDisplay() {
             $username = session('username');
             $DAO = new SecurityDAO();
