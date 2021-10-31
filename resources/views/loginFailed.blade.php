@@ -17,5 +17,5 @@
 
 <body>
 	<h1>Login Failed</h1><br><br>
-	<a href="login">Return to Login</a>
+	<a href="login" class="btn btn-dark">Return to Login</a>
 </body>

@@ -18,5 +18,5 @@ session()->flush();
 
 <body>
 	<h1>Logout Successful</h1><br></br><br></br>
-	<a href="home">Home</a>
+	<a href="home" class="btn btn-dark">Home</a>
 </body>

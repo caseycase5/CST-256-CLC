@@ -25,11 +25,12 @@ class LoginController extends Controller {
 
 		// Validating login 1 for valid 0 for invalid
 		$validation = $login->login($userModel);
-		$id = $DAO->getID($userModel);
-		$role = $DAO->getRole($userModel);
+		
 		if ($validation == 1) {
 			// $data = ['username' => $username];
 			echo "<h1>Login Successful!! Welcome " . $username . ".</h1><br><br>";
+			$id = $DAO->getID($userModel);
+			$role = $DAO->getRole($userModel);
 			session(['loggedIn' => $validation]);
 			session(['username' => $username]);
 			session(['id' => $id]);

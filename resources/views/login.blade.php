@@ -14,16 +14,27 @@
     </style>
 </head>
 <body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+		</div>
+		<div class="col">
 		<h2>User login</h2>
 		<form action="dologin" method="POST">
 		@csrf
 			<div class="form-group">
-				<label>Username:</label>
+				<label><b>Username:</b></label>
 				<input type="text" name="username" class="form-control" required>
 				</div>
 			<div class="form-group">
-				<label>Password:</label>
+				<label><b>Password:</b></label>
 				<input type="password" name="password" class="form-control" required>
 				</div>
-				<button style="margin-top: 5px;" type="submit" class="btn btn-primary">Login</button>
+				<button style="margin-top: 5px;" type="submit" class="btn btn-dark">Login</button>
 		</form>
+		</div>
+		<div class="col">
+		</div>
+		</div>
+		
+</div>
