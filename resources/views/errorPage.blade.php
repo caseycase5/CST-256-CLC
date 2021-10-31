@@ -13,7 +13,7 @@ if($loggedIn != 1) {
 <h1>Error Code: <?php // Returns an error code.
 echo $error?></h1>
 		
-		<a href="dashboard">Return to Dashboard</a>
+		<a href="dashboard" class="btn btn-dark">Return to Dashboard</a>
 	</body>
 </html>
 @endsection
