@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 use App\Services\Data\SecurityDAO;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JobPostingController extends Controller {
     
+   //function to edit Job Posting
     public function editJob(Request $request) {
     	$id = $request->input('jobID');
     	$DAO = new SecurityDAO();
@@ -77,17 +79,31 @@ class JobPostingController extends Controller {
     	
     	//Create new Connection
     	$conn = $DAO->getConnection();
+    	$count = DB::table('job_posting')->count();
+    	
+    	
     	
     	$sql = "INSERT INTO `job_posting` (`Company`, `Job_Title`, `Job_Type`, `Job_Description`, `Job_status`, `Closing_Date`)
 				VALUES('$company', '$jobTitle', '$jobType', '$jobDescription', '$jobStatus', '$closingDate');";
     	
-    	if (mysqli_query($conn, $sql)) {
-    		echo "<h1>Job Listing Created</h1><br>";
-    		return view("landingPage");
-    	} else {
-    		$error = mysqli_error($conn);
+    	if($count < 20 )
+    	{
+    		$sql = "INSERT INTO `job_posting` (`Company`, `Job_Title`, `Job_Type`, `Job_Description`, `Job_status`, `Closing_Date`)
+    				VALUES('$company', '$jobTitle', '$jobType', '$jobDescription', '$jobStatus', '$closingDate');";
+    		
+    		if (mysqli_query($conn, $sql)) {
+    			echo "<h1>Job Listing Created</h1><br>";
+    			return view("landingPage");
+    		} else {
+    			$error = mysqli_error($conn);
+    			$data = ['error' => $error];
+    			return view("errorPage")->with($data); // Redirect for failed Update
+    		}
+    	}
+    	else {
+    		$error = "Site has reached the maximum number of job postings.";
     		$data = ['error' => $error];
-    		return view("errorPage")->with($data); // Redirect for failed Update
+    		return view("errorPage")->with($data);
     	}
     }
     

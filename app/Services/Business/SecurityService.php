@@ -5,6 +5,7 @@ namespace App\Services\Business;
 use App\Models\UserModel;
 use App\Services\Data\SecurityDAO;
 
+//Service that retrieves user from the database 
 class SecurityService {
 	public function __construct() { // A constructor.
 		

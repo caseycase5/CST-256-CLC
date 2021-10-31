@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\Data\SecurityDAO;
 
-class AdminController extends Controller {
-	public function adminPanel() {
+class AdminController extends Controller //Admin Controllers allows the administrative to have extended priveleges.
+{
+    public function adminPanel() {
+//Displays admin panel. Shows all users, affinity groups, and job listings 
 		$DAO = new SecurityDAO();
 		// Section for printing out users
 		$conn = $DAO->getConnection();
@@ -90,6 +92,7 @@ class AdminController extends Controller {
 		}
 	}
 	
+	//function to return edit user profile view.
 	public function editUserProfile(Request $request) {
 		$id = $request->input('userID');
 		$DAO = new SecurityDAO();

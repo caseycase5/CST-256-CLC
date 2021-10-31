@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-class UserModel {
+class UserModel //Model for both member and administrative  
+{
 	
 	// Login Info.
 	private $username;
 	private $password;
-	private $role;
+	private $role;//Either 'admin' for administrator or 'member' for user member
 	
 	// Contact Info.
 	private $firstName;

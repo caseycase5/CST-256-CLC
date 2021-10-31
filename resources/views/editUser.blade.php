@@ -1,4 +1,6 @@
-<?php  // CST-256 page by team.
+<?php  
+// View that displays to edit a user
+// CST-256 page by team.
 use App\Http\Controllers\ProfileController;
 
 // Login Validation

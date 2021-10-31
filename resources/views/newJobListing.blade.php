@@ -1,4 +1,5 @@
 <?php  // CST-256 page by team.
+//Creates a new job listing
 use App\Http\Controllers\JobPostingController;
 
 // Checking if a user is logged in

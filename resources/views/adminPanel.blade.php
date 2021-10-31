@@ -1,4 +1,5 @@
 <?php 
+//Admin Panel view
 // Checking if a user is logged in
 $loggedIn = session('loggedIn');
 if($loggedIn != 1) {
